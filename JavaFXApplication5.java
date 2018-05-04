@@ -16,25 +16,10 @@ import javafx.stage.Stage;
  * @author jordan
  */
 public class JavaFXApplication5 extends Application {
-    int fishcaught = 0;
-    int score = 0;
+ 
     
     @Override
 public void start(Stage primaryStage) throws Exception{
-
-   
-    HBox topMenu = new HBox();
-    Button a = new Button("# of fish caught");
-    a.setOnAction (new EventHandler<ActionEvent>() {
-        @Override
-        public void handle(ActionEvent event) {
-            System.out.println(fishcaught);
-        }
-    });
-    a.setPrefSize(120,30);
-
-    topMenu.getChildren().addAll(a);
-
   
     HBox left = new HBox();
     Button button1 = new Button("Ask Me");
@@ -46,7 +31,7 @@ public void start(Stage primaryStage) throws Exception{
             int result = randomNum.nextInt(6);
             if (result == 1) {
                 System.out.println("Most Likely");
-               fishcaught ++;          
+                   
             }
             if (result == 2) {
                 System.out.println("Maybe");
@@ -56,7 +41,7 @@ public void start(Stage primaryStage) throws Exception{
             }
             if (result == 4) {
                 System.out.println("Ask Again Later");
-               fishcaught ++;          
+                   
             }
             if (result == 5) {
                 System.out.println("Never");
